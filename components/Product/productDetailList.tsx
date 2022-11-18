@@ -8,6 +8,68 @@ const Section = styled.div`
   /* padding: 0px 70px; */
   border-bottom: solid 1px #e9e9e9;
 `
+const productData = [
+  {
+    image: './images/product-localshop.svg',
+    title: 'LocalShop App',
+    detail: 'Amet minim mollit non deserunt',
+    link: '',
+  },
+  {
+    image: './images/product-localshop.svg',
+    title: 'K-ID',
+    detail: 'Amet minim mollit non deserunt',
+    link: '',
+  },
+  {
+    image: './images/product-localshop.svg',
+    title: 'Thegioitho.vn',
+    detail: 'Amet minim mollit non deserunt',
+    link: '',
+  },
+  {
+    image: './images/product-basetax.svg',
+    title: 'Basetax',
+    detail:
+      'A leading UK tax service provider for individuals, expatriates, partnerships & small businesses.',
+    link: '',
+  },
+  {
+    image: './images/product-vinid.svg',
+    title: 'VinID',
+    detail:
+      'Upgrading existing mobile app to improve UX and deliver new features to 5 million users.',
+    link: '',
+  },
+  {
+    image: './images/product-cxi.svg',
+    title: 'CXI',
+    detail:
+      'SaaS solution for brands improve their customer experience in industries: F&B, Spa, Clinic, Community ... ',
+    link: '',
+  },
+  {
+    image: './images/product-fixle.svg',
+    title: 'Fixle',
+    detail:
+      'Fixle is an online booking and payment platform that allows customers to search, book, track and pay for over 80 service...',
+    link: '',
+  },
+  {
+    image: './images/product-pulse.svg',
+    title: 'PULSE',
+    detail:
+      'Pulse is a healthcare solutions provider dedicated to the provision of quality and cost-effective health, scientific & ....',
+    link: '',
+  },
+  {
+    image: './images/product-proact.svg',
+    title: 'ProAct',
+    detail:
+      'Providing data analytics and real-time intelligence for industrial enterprises to assist in decision-making. Working as ...',
+    link: '',
+  },
+]
 
 export default function ProductDetailList(props: IProductDetailListProps) {
   return (
@@ -45,6 +107,15 @@ export default function ProductDetailList(props: IProductDetailListProps) {
             Clinic, Community ...
           </p>
           <button className="mt-[10px] border-none font-semibold">VIEW PRODJECT</button>
+        </div>
+      </div>
+      <div className="grid grid-cols-3 mx-[135px] px-[70px] border-l-[1px] border-r-[1px] border-t-[1px] py-[30px]">
+        <div className="flex justify-end">
+          <img className="w-[70] h-[70]" src="./images/arrow-left-circle.svg" />
+        </div>
+        <div></div>
+        <div>
+          <img className="w-[70] h-[70]" src="./images/arrow-right-circle.svg" />
         </div>
       </div>
     </Section>

@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import ExperienceDetail from '../components/Experience/experienceDetail'
 import ProductDetailList from '../components/Product/productDetailList'
+import Review from '../components/Review/review'
+import RightProduct from '../components/RightProduct/rightProduct'
 import TopBar from '../components/TopBar/topBar'
 import SomeProject from '../components/TrustOnMe/someProject'
 import styles from '../styles/Home.module.css'
@@ -20,6 +22,8 @@ export default function Home() {
         <SomeProject />
         <ExperienceDetail />
         <ProductDetailList />
+        <RightProduct />
+        <Review />
       </main>
 
       <footer className={styles.footer}>

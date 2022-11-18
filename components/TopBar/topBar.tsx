@@ -21,7 +21,6 @@ const Info = styled.div`
   border: solid 1px #e9e9e9;
   border-bottom: none;
 `
-
 export default function TopBar(props: TopBarProps) {
   console.log(' Top bar ')
   return (
