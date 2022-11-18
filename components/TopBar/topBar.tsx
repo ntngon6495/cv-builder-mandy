@@ -30,20 +30,20 @@ export default function TopBar(props: TopBarProps) {
         <div className="border-b-[1px]">
           <Container>
             <div className="col-span-1 pl-[70px] border-l-[1px]">
-              <a href="/" className="text-base font-bold text-[#E23D27]">
+              <a href="" className="text-base font-bold text-[#E23D27]">
                 MANDY NGUYEN
               </a>
             </div>
             <div className="col-span-1 pr-[70px] border-r-[1px]">
               <ul className="flex justify-end gap-5 ">
                 <li>
-                  <a href="/">About Me</a>
+                  <a href="">About Me</a>
                 </li>
                 <li>
-                  <a href="/">Project</a>
+                  <a href="">Project</a>
                 </li>
                 <li>
-                  <a href="/">Contact</a>
+                  <a href="">Contact</a>
                 </li>
               </ul>
             </div>
