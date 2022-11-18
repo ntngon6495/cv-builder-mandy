@@ -1,5 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import ExperienceDetail from '../components/Experience/experienceDetail'
+import ProductDetailList from '../components/Product/productDetailList'
+import TopBar from '../components/TopBar/topBar'
+import SomeProject from '../components/TrustOnMe/someProject'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -12,9 +16,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://www.facebook.com/2205.caheoyeubien">Mandy</a>
-        </h1>
+        <TopBar />
+        <SomeProject />
+        <ExperienceDetail />
+        <ProductDetailList />
       </main>
 
       <footer className={styles.footer}>
@@ -23,7 +28,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
@@ -32,3 +37,9 @@ export default function Home() {
     </div>
   )
 }
+
+// export async function getServerSideProps() {
+//   return {
+//     props: {},
+//   }
+// }
