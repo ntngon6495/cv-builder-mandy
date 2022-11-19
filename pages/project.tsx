@@ -82,8 +82,8 @@ export default function ProjectPage(props: IProjectProps) {
         </div>
         <div className="border-b-[1px]">
           <div className="mx-[135px] border-l-[1px] border-r-[1px] grid grid-cols-3">
-            {productData.map((item: any) => (
-              <div className="p-[20px]">
+            {productData.map((item: any, i) => (
+              <div key={i} className="p-[20px]">
                 <img src={item.image} className="w-[370px] h-[300px]" />
                 <p className="mt-5">{item.title}</p>
                 <p className="mt-2 text-[16px] font-normal">{item.detail}</p>
