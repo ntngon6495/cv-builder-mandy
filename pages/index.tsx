@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import ExperienceDetail from '../components/Experience/experienceDetail'
+import Info from '../components/Info/info'
 import ProductDetailList from '../components/Product/productDetailList'
 import Review from '../components/Review/review'
 import RightProduct from '../components/RightProduct/rightProduct'
@@ -19,6 +20,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <TopBar />
+        <Info />
         <SomeProject />
         <ExperienceDetail />
         <ProductDetailList />
@@ -41,9 +43,3 @@ export default function Home() {
     </div>
   )
 }
-
-// export async function getServerSideProps() {
-//   return {
-//     props: {},
-//   }
-// }
