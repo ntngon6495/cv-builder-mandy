@@ -29,7 +29,7 @@ export default function TopBar(props: TopBarProps) {
                   className={`cursor-pointer ${active === 'ABOUT_ME' ? 'text-[#E23D27]' : ''}`}
                   onClick={() => {
                     setActive('ABOUT_ME')
-                    router.push('about-me')
+                    router.push('about')
                   }}
                 >
                   About Me
