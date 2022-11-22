@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router'
 import * as React from 'react'
+import { MainLayout } from '../components/layout/default.layout'
 import TopBar from '../components/TopBar/topBar'
+import { NextPageWithLayout } from '../models'
 import styles from '../styles/Home.module.css'
 
 export interface IProjectProps {}
@@ -29,21 +31,21 @@ const productData = [
     title: 'Basetax',
     detail:
       'A leading UK tax service provider for individuals, expatriates, partnerships & small businesses.',
-    link: '',
+    link: '/project/base-tax',
   },
   {
     image: './images/product-vinid.svg',
     title: 'VinID',
     detail:
       'Upgrading existing mobile app to improve UX and deliver new features to 5 million users.',
-    link: '',
+    link: '/project/vinid',
   },
   {
     image: './images/product-cxi.svg',
     title: 'CXI',
     detail:
       'SaaS solution for brands improve their customer experience in industries: F&B, Spa, Clinic, Community ... ',
-    link: '',
+    link: '/project/cxi',
   },
   {
     image: './images/product-fixle.svg',
@@ -68,36 +70,40 @@ const productData = [
   },
 ]
 
-export default function ProjectPage(props: IProjectProps) {
+const ProjectPage = (props: IProjectProps) => {
   const router = useRouter()
 
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <TopBar />
-        <div className="border-b-[1px]">
-          <div className="mx-[135px] py-[60px] text-center border-l-[1px] border-r-[1px]">
-            <p className="text-[64px] font-semibold">The great Product Built</p>
-          </div>
+    <>
+      <div className="border-b-[1px]">
+        <div className="mx-[135px] py-[60px] text-center border-l-[1px] border-r-[1px]">
+          <p className="text-[64px] font-semibold">The great Product Built</p>
         </div>
-        <div className="border-b-[1px]">
-          <div className="mx-[135px] border-l-[1px] border-r-[1px] grid grid-cols-3">
-            {productData.map((item: any, i) => (
-              <div key={i} className="p-[20px]">
-                <img src={item.image} className="w-[370px] h-[300px]" />
-                <p className="mt-5">{item.title}</p>
-                <p className="mt-2 text-[16px] font-normal">{item.detail}</p>
-                <p
-                  className="mt-2 text-[16px] font-semibold"
+      </div>
+      <div className="border-b-[1px]">
+        <div className="mx-[135px] border-l-[1px] border-r-[1px] grid grid-cols-3">
+          {productData.map((item: any, i) => (
+            <div key={i} className="p-[20px]">
+              <img src={item.image} className="w-[370px] h-[300px]" />
+              <p className="mt-5">{item.title}</p>
+              <p className="mt-2 text-[16px] font-normal">{item.detail}</p>
+              {/* <p className="mt-2 text-[16px] font-semibold">VIEW PROJECT</p> */}
+              <div className="flex mt-[10px]">
+                <button
+                  className="border-none font-semibold"
                   onClick={() => router.push(item.link)}
                 >
-                  VIEW PRODJECT
-                </p>
+                  VIEW PROJECT
+                </button>
+                <img className="w-6 h-6 ml-2" src="/images/corner-up-right.svg" />
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </main>
-    </div>
+      </div>
+    </>
   )
 }
+
+ProjectPage.Layout = MainLayout
+export default ProjectPage

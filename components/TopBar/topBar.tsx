@@ -16,7 +16,10 @@ export default function TopBar(props: TopBarProps) {
         <div className="grid grid-cols-2 leading-[78px] mx-[135px]">
           <div className="col-span-1 pl-[70px] border-l-[1px]">
             <a
-              onClick={() => router.push('/')}
+              onClick={() => {
+                setActive('')
+                router.push('/')
+              }}
               className="text-base font-bold text-[#E23D27] cursor-pointer"
             >
               MANDY NGUYEN

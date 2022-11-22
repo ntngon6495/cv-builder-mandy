@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import * as React from 'react'
 import styled from 'styled-components'
 
@@ -72,6 +73,8 @@ const productData = [
 ]
 
 export default function ProductDetailList(props: IProductDetailListProps) {
+  const router = useRouter()
+
   return (
     <Section>
       <div className="mx-[135px] py-[60px] border-l-[1px] border-r-[1px] text-center">
@@ -88,7 +91,15 @@ export default function ProductDetailList(props: IProductDetailListProps) {
             A leading UK tax service provider for individuals, expatriates, partnerships & small
             businesses.
           </p>
-          <button className="mt-[10px] border-none font-semibold">VIEW PRODJECT</button>
+          <div className="flex mt-[10px]">
+            <button
+              className="border-none font-semibold"
+              onClick={() => router.push('/project/base-tax')}
+            >
+              VIEW PROJECT
+            </button>
+            <img className="w-6 h-6 ml-2" src="/images/corner-up-right.svg" />
+          </div>
         </div>
         <div className="p-5 ">
           <img className="w-[370px] h-[330px]" src="./images/product-pulse.svg" />
@@ -97,7 +108,10 @@ export default function ProductDetailList(props: IProductDetailListProps) {
             Pulse is a healthcare solutions provider dedicated to the provision of quality and
             cost-effective health, scientific & ....
           </p>
-          <button className="mt-[10px] border-none font-semibold">VIEW PRODJECT</button>
+          <div className="flex mt-[10px]">
+            <button className="border-none font-semibold">VIEW PROJECT</button>
+            <img className="w-6 h-6 ml-2" src="/images/corner-up-right.svg" />
+          </div>
         </div>
         <div className="p-5 ">
           <img className="w-[370px] h-[330px]" src="./images/product-cxi.svg" />
@@ -106,7 +120,15 @@ export default function ProductDetailList(props: IProductDetailListProps) {
             SaaS solution for brands improve their customer experience in industries: F&B, Spa,
             Clinic, Community ...
           </p>
-          <button className="mt-[10px] border-none font-semibold">VIEW PRODJECT</button>
+          <div className="flex mt-[10px]">
+            <button
+              className="border-none font-semibold"
+              onClick={() => router.push('/project/cxi')}
+            >
+              VIEW PROJECT
+            </button>
+            <img className="w-6 h-6 ml-2" src="/images/corner-up-right.svg" />
+          </div>
         </div>
       </div>
       <div className="grid grid-cols-3 mx-[135px] px-[70px] border-l-[1px] border-r-[1px] border-t-[1px] py-[30px]">
